@@ -34,7 +34,7 @@ export default function AdminLayout() {
   };
 
   return (
-    <div className="flex min-h-screen bg-sand-100">
+    <div className="flex h-screen overflow-hidden bg-sand-100">
       {/* Overlay mobile */}
       {sidebarOpen && (
         <div
@@ -46,11 +46,11 @@ export default function AdminLayout() {
       {/* Sidebar */}
       <aside
         className={clsx(
-          "fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-pine-800 text-pine-100 transition-transform duration-300 md:static md:translate-x-0",
+          "fixed inset-y-0 left-0 z-50 flex w-64 shrink-0 flex-col bg-pine-800 text-pine-100 transition-transform duration-300 md:static md:translate-x-0",
           sidebarOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
-        <div className="flex h-20 items-center gap-3 border-b border-pine-700/60 px-6">
+        <div className="flex h-20 shrink-0 items-center gap-3 border-b border-pine-700/60 px-6">
           <img
             src="/logoinsunmedal.png"
             alt="Logo"
@@ -64,7 +64,7 @@ export default function AdminLayout() {
           </div>
         </div>
 
-        <nav className="flex-1 space-y-1 p-4">
+        <nav className="flex-1 space-y-1 overflow-y-auto p-4">
           {menuItems.map((item) => (
             <NavLink
               key={item.path}
@@ -85,12 +85,23 @@ export default function AdminLayout() {
           ))}
         </nav>
 
-        <div className="border-t border-pine-700/60 p-4">
+        <div className="shrink-0 border-t border-pine-700/60 p-4">
+          <div className="mb-3 flex items-center gap-3 rounded-lg bg-pine-700/40 px-3 py-2.5">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pine-600 text-sm font-bold text-white">
+              {(admin?.nama_lengkap ?? "A").charAt(0).toUpperCase()}
+            </div>
+            <div className="min-w-0">
+              <p className="truncate text-sm font-semibold text-white">
+                {admin?.nama_lengkap ?? "…"}
+              </p>
+              <p className="truncate text-xs text-pine-300">Administrator</p>
+            </div>
+          </div>
           <button
             onClick={() => void handleLogout()}
-            className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-pine-200 transition-colors hover:bg-red-900/40 hover:text-red-100"
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-pine-600/60 px-4 py-2.5 text-sm font-medium text-pine-100 transition-colors hover:border-red-500/60 hover:bg-red-900/40 hover:text-red-100"
           >
-            <LogOut className="h-5 w-5" /> Keluar
+            <LogOut className="h-4 w-4" /> Keluar
           </button>
         </div>
       </aside>
@@ -98,14 +109,15 @@ export default function AdminLayout() {
       {/* Konten */}
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex h-20 shrink-0 items-center justify-between border-b border-sand-200 bg-white px-4 sm:px-8">
-          <button
-            className="rounded-lg p-2 text-charcoal-700 hover:bg-sand-100 md:hidden"
-            onClick={() => setSidebarOpen(true)}
-            aria-label="Buka menu"
-          >
-            <Menu className="h-5 w-5" />
-          </button>
-          <div className="hidden md:block" />
+          <div className="flex items-center gap-3">
+            <button
+              className="rounded-lg p-2 text-charcoal-700 hover:bg-sand-100 md:hidden"
+              onClick={() => setSidebarOpen(true)}
+              aria-label="Buka menu"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          </div>
           <div className="flex items-center gap-3">
             <div className="text-right">
               <p className="text-sm font-semibold text-charcoal-900">
@@ -119,7 +131,7 @@ export default function AdminLayout() {
           </div>
         </header>
 
-        <main className="flex-1 overflow-auto p-4 sm:p-8">
+        <main className="flex-1 overflow-y-auto p-4 pb-12 sm:p-8 sm:pb-14">
           <Outlet />
         </main>
       </div>
