@@ -1,0 +1,37 @@
+# ============================================================
+# Cloudflare Workers — Survei Kepuasan Masyarakat Kelurahan Talun
+# Deploy: npx wrangler deploy
+# ============================================================
+
+name = "survei-kepuasan-talun"
+main = "worker/index.ts"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ============================================================
+# Static assets (hasil build frontend: npm run build -> dist/)
+# ============================================================
+assets = { directory = "./dist", binding = "ASSETS", not_found_handling = "single-page-application" }
+
+# ============================================================
+# D1 Database
+# Setup pertama kali:
+#   npx wrangler d1 create survei-kepuasan-talun-db
+#   npx wrangler d1 migrations apply survei-kepuasan-talun-db --remote
+# ============================================================
+[[d1_databases]]
+binding = "DB"
+database_name = "survei-kepuasan-talun-db"
+database_id = "2d3f35b6-0ac9-49ec-bf82-6f7030b7ecc2"
+migrations_dir = "migrations"
+
+# ============================================================
+# Observability
+# ============================================================
+[observability]
+enabled = true
+
+# ============================================================
+# Production env (secret di-set via: npx wrangler secret put)
+# ============================================================
+# [vars]

@@ -1,34 +1,57 @@
 @import "tailwindcss";
 
-/* --- KONFIGURASI TEMA (TAILWIND V4) --- */
 @theme {
-  /* 1. Definisi Font (Pastikan sudah import Google Fonts di index.html jika perlu) */
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
-  /* 2. Palet Warna Utama (Sesuai Desain) */
-  --color-brand-blue: #2563eb; /* Biru Utama (Tombol & Icon) - Blue 600 */
-  --color-brand-blue-hover: #1d4ed8; /* Biru Gelap (Hover State) - Blue 700 */
+  --color-pine-50: #f0f5f2;
+  --color-pine-100: #dce8e1;
+  --color-pine-200: #b9d1c4;
+  --color-pine-300: #8fb2a0;
+  --color-pine-400: #5f8d77;
+  --color-pine-500: #3f6f59;
+  --color-pine-600: #2c5946;
+  --color-pine-700: #1E4D3B;
+  --color-pine-800: #173a2d;
+  --color-pine-900: #122e24;
 
-  --color-brand-bg: #eff6ff; /* Latar Belakang Halaman (Ice Blue) */
-  --color-brand-surface: #ffffff; /* Warna Kartu Putih */
+  --color-padi-100: #e7efe8;
+  --color-padi-400: #4E7A5C;
 
-  --color-brand-text: #1e293b; /* Warna Teks Utama (Slate 800) */
-  --color-brand-muted: #64748b; /* Warna Teks Abu-abu (Slate 500) */
+  --color-sand-50: #faf7f0;
+  --color-sand-100: #F5F1E8;
+  --color-sand-200: #e9e2d3;
 
-  --color-input-bg: #f8fafc; /* Background Input/Textarea (Slate 50) */
-  --color-input-border: #e2e8f0; /* Garis Pinggir Input (Slate 200) */
+  --color-kayu-300: #b0957a;
+  --color-kayu-500: #8A6A4F;
+  --color-kayu-700: #5f4836;
 
-  /* 3. Shadow Custom (Bayangan Halus) */
-  --shadow-card: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  --color-batik-400: #d4b64a;
+  --color-batik-500: #C9A227;
+
+  --color-charcoal-700: #38453f;
+  --color-charcoal-900: #22302B;
+
+  --shadow-card: 0 1px 2px rgba(34, 48, 43, 0.04), 0 8px 24px -8px rgba(34, 48, 43, 0.12);
+  --shadow-lift: 0 2px 4px rgba(34, 48, 43, 0.05), 0 16px 40px -12px rgba(34, 48, 43, 0.18);
+
+  --animate-rise: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* --- BASE STYLES --- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root {
   font-family: var(--font-sans);
-  line-height: 1.5;
-  font-weight: 400;
-
+  color: var(--color-charcoal-900);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,47 +59,28 @@
 }
 
 body {
-  background-color: var(--color-brand-bg);
-  color: var(--color-brand-text);
+  background-color: var(--color-sand-100);
+  color: var(--color-charcoal-900);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-/* --- UTILITIES TAMBAHAN --- */
-
-/* 1. Scrollbar Modern (Opsional, agar lebih rapi) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
-  border-radius: 99px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: #94a3b8;
+::selection {
+  background: var(--color-batik-400);
+  color: var(--color-charcoal-900);
 }
 
-/* 2. Tweak untuk elemen Form */
 input,
 textarea,
 select,
 button {
   font-family: inherit;
-  outline: none; /* Kita handle focus ring pakai Tailwind */
 }
 
-/* 3. Animasi Loading (Opsional) */
-@keyframes spin-slow {
-  to {
-    transform: rotate(360deg);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-}
-.animate-spin-slow {
-  animation: spin-slow 3s linear infinite;
 }

@@ -63,11 +63,21 @@ Setiap hasil kerja AI yang mengandung halusinasi **wajib ditolak dan dikerjakan 
 
 ## 5. Teknologi yang Dipakai
 
-- React 19 + Vite 7
+- React 19 + Vite 7 + TypeScript
 - Tailwind CSS 4
 - React Router 7
-- Supabase (PostgreSQL)
-- Deployment: Vercel
+- API: Hono di Cloudflare Workers
+- Database: Cloudflare D1 (SQLite) — migrasi di folder `migrations/`
+- Deployment: Cloudflare Workers (`npx wrangler deploy`)
+
+## 6. Aturan Khusus Stack Cloudflare
+
+- **Jangan menyebut Supabase/Vercel** — kedua layanan ini sudah diganti total.
+- **Jangan mengarang binding** — binding yang ada hanya `DB` (D1) dan `ASSETS`. Nama lain belum tentu ada.
+- **Jangan mengarang tabel/kolom** — skema satu-satunya sumber kebenaran ada di `migrations/`. Verifikasi ke sana sebelum menulis query.
+- **Jangan mengedit `wrangler.toml` tanpa alasan** — `database_id` terhubung ke database remote nyata.
+- **Selalu uji `npx tsc -p tsconfig.worker.json` + `npm run build`** sebelum menyatakan selesai.
+- Perubahan skema DB harus lewat file migration baru di `migrations/`, bukan edit migration lama.
 
 ---
 

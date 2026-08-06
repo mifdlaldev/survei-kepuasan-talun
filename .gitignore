@@ -28,6 +28,10 @@ env
 .env.local
 .env.example.local
 
+# Cloudflare Workers (state lokal, jangan di-commit)
+.wrangler/
+.dev.vars
+
 # Tooling lokal (AI coding assistant)
 .omo/
 .codegraph/
