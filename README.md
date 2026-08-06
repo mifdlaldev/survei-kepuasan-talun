@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/github/license/mifdlaldev/survei-kepuasan-talun)](https://github.com/mifdlaldev/survei-kepuasan-talun/blob/main/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/mifdlaldev/survei-kepuasan-talun)](https://github.com/mifdlaldev/survei-kepuasan-talun/releases)
+[![CI](https://github.com/mifdlaldev/survei-kepuasan-talun/actions/workflows/ci.yml/badge.svg)](https://github.com/mifdlaldev/survei-kepuasan-talun/actions)
 [![Workers](https://img.shields.io/badge/deployed%20on-Cloudflare%20Workers-orange)](https://survei-kepuasan-talun.mifdlaltsaqibalf25.workers.dev)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
@@ -27,6 +28,20 @@ Aplikasi ini memungkinkan masyarakat mengisi survei secara daring dari perangkat
 - Dashboard ringkasan data responden dan skor survei
 - Kelola daftar pertanyaan (tambah, ubah, aktif/nonaktif)
 - Lihat seluruh feedback kritik & saran dari masyarakat
+
+## Tampilan (Screenshot)
+
+| Halaman Survei | Form Data Responden |
+|---|---|
+| ![Survei intro](docs/screenshots/01-survei-intro.png) | ![Biodata](docs/screenshots/02-survei-biodata.png) |
+
+| Pertanyaan Survei | Dashboard Admin |
+|---|---|
+| ![Pertanyaan](docs/screenshots/03-survei-pertanyaan.png) | ![Dashboard](docs/screenshots/04-admin-dashboard.png) |
+
+| Kelola Soal | Kritik & Saran |
+|---|---|
+| ![Kelola soal](docs/screenshots/05-admin-soal.png) | ![Feedback](docs/screenshots/06-admin-feedback.png) |
 
 ## Keamanan
 
@@ -125,6 +140,8 @@ https://survei-kepuasan-talun.mifdlaltsaqibalf25.workers.dev
 ## Kontribusi
 
 Kami menyambut kontribusi dari siapa pun. Baca [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan memulai, dan [Kode Etik](CODE_OF_CONDUCT.md) sebagai pedoman perilaku.
+
+Riwayat perubahan: [CHANGELOG.md](CHANGELOG.md) · Butuh bantuan: [SUPPORT.md](SUPPORT.md)
 
 ## Lisensi
 
