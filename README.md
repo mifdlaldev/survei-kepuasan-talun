@@ -1,10 +1,18 @@
-# Survei Kepuasan Masyarakat Kelurahan Talun
+<p align="center">
+  <img src="public/logoinsunmedal.png" alt="Logo Kelurahan Talun" width="110" />
+</p>
 
-[![License](https://img.shields.io/github/license/mifdlaldev/survei-kepuasan-talun)](https://github.com/mifdlaldev/survei-kepuasan-talun/blob/main/LICENSE)
-[![GitHub Release](https://img.shields.io/github/v/release/mifdlaldev/survei-kepuasan-talun)](https://github.com/mifdlaldev/survei-kepuasan-talun/releases)
-[![CI](https://github.com/mifdlaldev/survei-kepuasan-talun/actions/workflows/ci.yml/badge.svg)](https://github.com/mifdlaldev/survei-kepuasan-talun/actions)
+<h1 align="center">Survei Kepuasan Masyarakat Kelurahan Talun</h1>
 
-> Aplikasi Survei Kepuasan Masyarakat (SKM) terhadap kualitas pelayanan publik di **Kantor Kelurahan Talun, Kecamatan Sumedang Utara, Kabupaten Sumedang, Jawa Barat**.
+<p align="center">
+  <a href="https://github.com/mifdlaldev/survei-kepuasan-talun/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mifdlaldev/survei-kepuasan-talun" alt="License" /></a>
+  <a href="https://github.com/mifdlaldev/survei-kepuasan-talun/releases"><img src="https://img.shields.io/github/v/release/mifdlaldev/survei-kepuasan-talun" alt="GitHub Release" /></a>
+  <a href="https://github.com/mifdlaldev/survei-kepuasan-talun/actions"><img src="https://github.com/mifdlaldev/survei-kepuasan-talun/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+</p>
+
+<p align="center">
+  <em>Aplikasi Survei Kepuasan Masyarakat (SKM) terhadap kualitas pelayanan publik di <strong>Kantor Kelurahan Talun, Kecamatan Sumedang Utara, Kabupaten Sumedang, Jawa Barat</strong>.</em>
+</p>
 
 ## Tentang
 
