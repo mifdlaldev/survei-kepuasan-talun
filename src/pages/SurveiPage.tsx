@@ -116,7 +116,7 @@ export default function SurveiPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-pine-600">
             Pemerintah Kabupaten Sumedang
           </p>
-          <h1 className="font-display text-2xl font-semibold leading-tight text-charcoal-900">
+          <h1 className="font-display text-2xl font-bold leading-tight text-charcoal-900">
             Survei Kepuasan Masyarakat
           </h1>
           <p className="text-sm text-charcoal-700/70">Kantor Kelurahan Talun, Kec. Cisarua</p>
@@ -146,7 +146,7 @@ export default function SurveiPage() {
               {step === "intro" && (
                 <motion.div key="intro" {...slide} className="space-y-6">
                   <div className="space-y-2">
-                    <h2 className="font-display text-2xl font-semibold text-charcoal-900">
+                    <h2 className="font-display text-2xl font-bold text-charcoal-900">
                       Selamat datang
                     </h2>
                     <p className="text-sm leading-relaxed text-charcoal-700/80">
@@ -362,7 +362,7 @@ export default function SurveiPage() {
                   <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-pine-50">
                     <CheckCircle2 className="h-10 w-10 text-pine-600" strokeWidth={1.5} />
                   </div>
-                  <h2 className="font-display text-2xl font-semibold text-charcoal-900">
+                  <h2 className="font-display text-2xl font-bold text-charcoal-900">
                     Terima kasih!
                   </h2>
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-charcoal-700/80">

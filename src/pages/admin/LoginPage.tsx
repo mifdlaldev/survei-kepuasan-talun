@@ -38,7 +38,7 @@ export default function LoginPage() {
             alt="Logo Kelurahan Talun"
             className="mx-auto mb-4 h-16 w-16 rounded-2xl bg-white p-1.5 shadow-card"
           />
-          <h1 className="font-display text-2xl font-semibold text-charcoal-900">
+          <h1 className="font-display text-2xl font-bold text-charcoal-900">
             Panel Administrator
           </h1>
           <p className="mt-1 text-sm text-charcoal-700/70">

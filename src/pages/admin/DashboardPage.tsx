@@ -70,7 +70,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="font-display text-2xl font-semibold text-charcoal-900">Dashboard</h1>
+        <h1 className="font-display text-2xl font-bold text-charcoal-900">Dashboard</h1>
         <p className="mt-1 text-sm text-charcoal-700/70">
           Ringkasan data Survei Kepuasan Masyarakat
         </p>
