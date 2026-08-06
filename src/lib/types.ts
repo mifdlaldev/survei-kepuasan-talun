@@ -26,11 +26,6 @@ export interface AnswerInput {
   skor: number;
 }
 
-export interface SubmitSurveyInput {
-  respondent: RespondentInput;
-  answers: AnswerInput[];
-}
-
 export interface AdminSession {
   id: number;
   username: string;
@@ -63,11 +58,6 @@ export interface FeedbackItem {
   nama: string;
   kritik_saran: string;
   created_at: string;
-}
-
-export interface ApiError {
-  error: string;
-  retry_after?: number;
 }
 
 export const LIKERT_OPTIONS = [

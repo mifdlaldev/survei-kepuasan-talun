@@ -3,8 +3,6 @@
 export interface Env {
   DB: D1Database;
   ASSETS: Fetcher;
-  /** Secret untuk menandai sesi antar-restart (opsional, direkomendasikan). */
-  SESSION_SECRET?: string;
 }
 
 /** Admin yang sedang login (dari middleware auth). */

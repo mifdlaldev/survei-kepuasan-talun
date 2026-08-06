@@ -8,45 +8,24 @@
   --color-pine-100: #dce8e1;
   --color-pine-200: #b9d1c4;
   --color-pine-300: #8fb2a0;
-  --color-pine-400: #5f8d77;
   --color-pine-500: #3f6f59;
   --color-pine-600: #2c5946;
   --color-pine-700: #1E4D3B;
   --color-pine-800: #173a2d;
-  --color-pine-900: #122e24;
 
-  --color-padi-100: #e7efe8;
   --color-padi-400: #4E7A5C;
 
   --color-sand-50: #faf7f0;
   --color-sand-100: #F5F1E8;
   --color-sand-200: #e9e2d3;
 
-  --color-kayu-300: #b0957a;
-  --color-kayu-500: #8A6A4F;
-  --color-kayu-700: #5f4836;
-
   --color-batik-400: #d4b64a;
-  --color-batik-500: #C9A227;
 
   --color-charcoal-700: #38453f;
   --color-charcoal-900: #22302B;
 
   --shadow-card: 0 1px 2px rgba(34, 48, 43, 0.04), 0 8px 24px -8px rgba(34, 48, 43, 0.12);
   --shadow-lift: 0 2px 4px rgba(34, 48, 43, 0.05), 0 16px 40px -12px rgba(34, 48, 43, 0.18);
-
-  --animate-rise: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 :root {

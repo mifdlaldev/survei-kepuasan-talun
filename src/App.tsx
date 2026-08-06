@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import SurveiPage from "@/pages/SurveiPage";
 import LoginPage from "@/pages/admin/LoginPage";
 import AdminLayout from "@/components/layout/AdminLayout";

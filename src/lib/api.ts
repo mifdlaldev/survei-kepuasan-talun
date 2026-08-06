@@ -13,18 +13,6 @@ import type {
  * Session cookie dikelola browser otomatis (HttpOnly — tidak disentuh JS).
  */
 
-class ApiClientError extends Error {
-  status: number;
-  retryAfter?: number;
-
-  constructor(message: string, status: number, retryAfter?: number) {
-    super(message);
-    this.name = "ApiClientError";
-    this.status = status;
-    this.retryAfter = retryAfter;
-  }
-}
-
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`/api${path}`, {
     headers: options?.body ? { "Content-Type": "application/json" } : undefined,
@@ -34,15 +22,13 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 
   if (!res.ok) {
     let message = "Terjadi kesalahan. Silakan coba lagi.";
-    let retryAfter: number | undefined;
     try {
-      const body = (await res.json()) as { error?: string; retry_after?: number };
+      const body = (await res.json()) as { error?: string };
       if (body.error) message = body.error;
-      retryAfter = body.retry_after;
     } catch {
       // body bukan JSON — pakai pesan default
     }
-    throw new ApiClientError(message, res.status, retryAfter);
+    throw new Error(message);
   }
 
   return (await res.json()) as T;
@@ -113,5 +99,3 @@ export const api = {
   getFeedback: () =>
     request<{ data: FeedbackItem[] }>("/admin/feedback"),
 };
-
-export { ApiClientError };
