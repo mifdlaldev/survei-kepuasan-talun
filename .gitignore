@@ -26,3 +26,8 @@ dist-ssr
 .env
 env
 .env.local
+.env.example.local
+
+# Tooling lokal (AI coding assistant)
+.omo/
+.codegraph/
