@@ -1,0 +1,14 @@
+# Normalisasi line ending — konsisten antar OS
+* text=auto eol=lf
+
+# File biner jangan disentuh git
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Artefak build
+dist/ -text

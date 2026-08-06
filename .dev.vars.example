@@ -1,0 +1,5 @@
+# Salin file ini menjadi `.dev.vars` untuk development lokal (wrangler dev).
+# `.dev.vars` sudah di-gitignore — jangan commit kredensial asli.
+
+# Secret untuk sesi antar-restart (opsional tapi direkomendasikan)
+SESSION_SECRET=ubah-ini-dengan-string-acak-panjang

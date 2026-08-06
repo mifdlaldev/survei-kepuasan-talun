@@ -83,8 +83,14 @@ Aplikasi ini memungkinkan masyarakat mengisi survei secara daring dari perangkat
 │       ├── middleware/       # Auth sesi + rate limiting
 │       └── lib/              # PBKDF2, sesi, validasi Zod
 ├── migrations/               # Skema SQL D1
+├── docs/
+│   ├── API.md                # Dokumentasi endpoint API
+│   └── screenshots/          # Tangkapan layar aplikasi
+├── test/                     # Test worker (Vitest + pool-workers)
 └── wrangler.toml             # Konfigurasi Workers + binding D1
 ```
+
+Dokumentasi lengkap endpoint API: [docs/API.md](docs/API.md).
 
 ## Persyaratan
 
