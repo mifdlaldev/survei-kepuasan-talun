@@ -4,6 +4,27 @@ Semua perubahan penting pada proyek ini dicatat di sini.
 
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1.0/) dan proyek ini mematuhi [Semantic Versioning](https://semver.org/lang/id/).
 
+## [1.1.0] - 2026-08-06
+
+### Added
+- **43 unit & integrasi test** (36 worker API + 7 frontend) via Vitest + `@cloudflare/vitest-pool-workers`
+- **Proteksi branch `main`**: wajib PR + review + CI hijau, force push ditolak
+- `docs/API.md` — dokumentasi lengkap endpoint API
+- `.nvmrc`, `engines`, `.gitattributes`, `delete_branch_on_merge`
+
+### Changed
+- **Dependensi di-update** untuk menutup advisories keamanan: `react-router-dom` 7.13 → 7.18.2, `vite` 7 → **8.2.0** (rolldown, build jauh lebih cepat), `postcss` 8.5.25, `tailwindcss` 4.3.3, `@vitejs/plugin-react` 6
+- Font heading dari Fraunces → **Archivo** (lebih tegas & formal)
+- Sidebar admin: full-height, footer profil dihapus (tidak duplikat header)
+- Alamat instansi diperbaiki: Kec. Cisarua → **Kec. Sumedang Utara**
+- Metadata repositori disesuaikan: **public read-only**, aplikasi berjalan terbatas untuk warga Kelurahan Talun
+
+### Removed
+- **Deployment global**: worker `survei-kepuasan-talun` dihapus dari Cloudflare (aplikasi tidak lagi live publik)
+- Jalur kontribusi orang lain: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SUPPORT.md`, template Issue/PR, `dependabot.yml`, workflow auto-deploy
+- Issues & Wiki repositori (tidak ada interaksi eksternal)
+- Homepage repositori (URL worker lama)
+
 ## [1.0.0] - 2026-08-06
 
 ### Added
