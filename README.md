@@ -6,7 +6,7 @@
 [![Workers](https://img.shields.io/badge/deployed%20on-Cloudflare%20Workers-orange)](https://survei-kepuasan-talun.mifdlaltsaqibalf25.workers.dev)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-> Website resmi Survei Kepuasan Masyarakat (SKM) terhadap kualitas pelayanan publik di **Kantor Kelurahan Talun, Kecamatan Cisarua, Kabupaten Sumedang, Jawa Barat**.
+> Website resmi Survei Kepuasan Masyarakat (SKM) terhadap kualitas pelayanan publik di **Kantor Kelurahan Talun, Kecamatan Sumedang Utara, Kabupaten Sumedang, Jawa Barat**.
 
 ## Tentang
 

@@ -119,7 +119,7 @@ export default function SurveiPage() {
           <h1 className="font-display text-2xl font-bold leading-tight text-charcoal-900">
             Survei Kepuasan Masyarakat
           </h1>
-          <p className="text-sm text-charcoal-700/70">Kantor Kelurahan Talun, Kec. Cisarua</p>
+          <p className="text-sm text-charcoal-700/70">Kantor Kelurahan Talun, Kec. Sumedang Utara</p>
         </div>
       </header>
 

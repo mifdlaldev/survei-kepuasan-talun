@@ -86,17 +86,6 @@ export default function AdminLayout() {
         </nav>
 
         <div className="shrink-0 border-t border-pine-700/60 p-4">
-          <div className="mb-3 flex items-center gap-3 rounded-lg bg-pine-700/40 px-3 py-2.5">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pine-600 text-sm font-bold text-white">
-              {(admin?.nama_lengkap ?? "A").charAt(0).toUpperCase()}
-            </div>
-            <div className="min-w-0">
-              <p className="truncate text-sm font-semibold text-white">
-                {admin?.nama_lengkap ?? "…"}
-              </p>
-              <p className="truncate text-xs text-pine-300">Administrator</p>
-            </div>
-          </div>
           <button
             onClick={() => void handleLogout()}
             className="flex w-full items-center justify-center gap-2 rounded-lg border border-pine-600/60 px-4 py-2.5 text-sm font-medium text-pine-100 transition-colors hover:border-red-500/60 hover:bg-red-900/40 hover:text-red-100"
