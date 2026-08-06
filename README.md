@@ -3,16 +3,16 @@
 [![License](https://img.shields.io/github/license/mifdlaldev/survei-kepuasan-talun)](https://github.com/mifdlaldev/survei-kepuasan-talun/blob/main/LICENSE)
 [![GitHub Release](https://img.shields.io/github/v/release/mifdlaldev/survei-kepuasan-talun)](https://github.com/mifdlaldev/survei-kepuasan-talun/releases)
 [![CI](https://github.com/mifdlaldev/survei-kepuasan-talun/actions/workflows/ci.yml/badge.svg)](https://github.com/mifdlaldev/survei-kepuasan-talun/actions)
-[![Workers](https://img.shields.io/badge/deployed%20on-Cloudflare%20Workers-orange)](https://survei-kepuasan-talun.mifdlaltsaqibalf25.workers.dev)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-> Website resmi Survei Kepuasan Masyarakat (SKM) terhadap kualitas pelayanan publik di **Kantor Kelurahan Talun, Kecamatan Sumedang Utara, Kabupaten Sumedang, Jawa Barat**.
+> Aplikasi Survei Kepuasan Masyarakat (SKM) terhadap kualitas pelayanan publik di **Kantor Kelurahan Talun, Kecamatan Sumedang Utara, Kabupaten Sumedang, Jawa Barat**.
 
 ## Tentang
 
 Survei Kepuasan Masyarakat (SKM) merupakan instrumen pengukuran tingkat kepuasan masyarakat terhadap kualitas pelayanan publik, sesuai amanat **PermenPAN-RB No. 14 Tahun 2017** tentang Pedoman Penyusunan Survei Kepuasan Masyarakat Unit Penyelenggara Pelayanan Publik.
 
 Aplikasi ini memungkinkan masyarakat mengisi survei secara daring dari perangkat masing-masing (ponsel/komputer), menggantikan metode kertas yang lebih lambat dan rentan kehilangan data. Hasil survei dikelola melalui dashboard admin dan dijadikan bahan evaluasi peningkatan kualitas pelayanan.
+
+> **Status**: Kode sumber repositori ini dipublikasikan untuk keperluan dokumentasi. Aplikasi berjalan terbatas untuk warga Kelurahan Talun dan tidak di-deploy secara global.
 
 ## Fitur
 
@@ -134,20 +134,9 @@ npx wrangler dev --local --port 8787
 
 ## Deployment
 
-```bash
-npm run build        # 1. Build frontend
-npx wrangler deploy  # 2. Deploy worker + assets + D1 ke Cloudflare
-```
+Aplikasi ini berjalan terbatas di lingkungan internal Kelurahan Talun. Deployment dilakukan secara privat oleh administrator; instruksi teknis ada di `wrangler.toml` dan [docs/API.md](docs/API.md).
 
-```
-https://survei-kepuasan-talun.mifdlaltsaqibalf25.workers.dev
-```
-
-## Kontribusi
-
-Kami menyambut kontribusi dari siapa pun. Baca [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan memulai, dan [Kode Etik](CODE_OF_CONDUCT.md) sebagai pedoman perilaku.
-
-Riwayat perubahan: [CHANGELOG.md](CHANGELOG.md) · Butuh bantuan: [SUPPORT.md](SUPPORT.md)
+Riwayat perubahan: [CHANGELOG.md](CHANGELOG.md)
 
 ## Lisensi
 
