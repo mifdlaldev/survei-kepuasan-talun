@@ -36,8 +36,3 @@ env
 # Tooling lokal (AI coding assistant)
 .omo/
 .codegraph/
-# Material posting freelance/sosmed — JANGAN commit
-FIVERR-UPWORK-PREP.md
-LINKEDIN-PREP.md
-fiverr-portfolio/
-linkedin-media/
